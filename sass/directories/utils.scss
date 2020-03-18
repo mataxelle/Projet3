@@ -1,0 +1,22 @@
+@mixin contenu__size {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 150px;
+    margin-bottom: 0px;
+}
+
+@mixin contenu__bloc__size {
+    width: 300px;
+    margin: 40px;
+    padding: 40px;
+    padding-top: 170px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+@mixin btn-style {
+    color: $color-secondary;
+    text-decoration: none;
+    background-color: $color-primary;
+}
