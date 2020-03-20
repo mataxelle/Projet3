@@ -1,12 +1,13 @@
-@mixin contenu__size {
+@mixin contenu-size {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 150px;
+    margin-top: 50px;
     margin-bottom: 0px;
 }
 
-@mixin contenu__bloc__size {
+@mixin contenu-bloc-size {
     width: 300px;
     margin: 40px;
     padding: 40px;
@@ -19,4 +20,19 @@
     color: $color-secondary;
     text-decoration: none;
     background-color: $color-primary;
+}
+
+/*Partie contenu page menu*/
+@mixin contenu-page-menu-size {
+    display: flex;
+    flex-direction: column;
+    margin: 150px;
+    margin-top: 50px;
+    padding: 100px 40px;
+    border: 1px solid black;
+}
+
+@mixin tableau {
+    width: 100%;
+    padding: 10px 0px;
 }

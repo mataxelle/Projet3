@@ -30,9 +30,9 @@ footer {
 }
 
 .contenu {
-    @include contenu__size;
+    @include contenu-size;
     .contenu__bloc {
-        @include contenu__bloc__size;
+        @include contenu-bloc-size;
         h2 {
             color: cornflowerblue;
         }
@@ -65,4 +65,34 @@ footer {
         border-radius: 20px;
         padding: 40px 60px;
     }
+}
+
+/*Partie contenu page menu*/
+.contenu__menu {
+    @include contenu-page-menu-size;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+table, tr, td {
+    @include tableau;
+}
+
+caption {
+    font-size: 20px;
 }

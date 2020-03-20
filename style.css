@@ -1,3 +1,4 @@
+/*Partie contenu page menu*/
 body {
   background-color: #f0eeee;
   margin: 0px; }
@@ -26,6 +27,7 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   margin: 150px;
+  margin-top: 50px;
   margin-bottom: 0px; }
   .contenu .contenu__bloc {
     width: 300px;
@@ -60,5 +62,35 @@ footer {
     font-size: 40px;
     border-radius: 20px;
     padding: 40px 60px; }
+
+/*Partie contenu page menu*/
+.contenu__menu {
+  display: flex;
+  flex-direction: column;
+  margin: 150px;
+  margin-top: 50px;
+  padding: 100px 40px;
+  border: 1px solid black; }
+
+h2 {
+  font-size: 40px;
+  text-align: center; }
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 100px; }
+
+h4 {
+  font-size: 20px;
+  text-align: center; }
+
+table, tr, td {
+  width: 100%;
+  padding: 10px 0px; }
+
+caption {
+  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
