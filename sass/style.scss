@@ -1,5 +1,6 @@
-@import "directories/base.scss";
-@import "directories/utils.scss";
+@import "directories/utils/variables";
+@import "directories/utils/mixin";
+@import "directories/base/base";
 
 body {
     background-color: $color-page;
@@ -34,13 +35,21 @@ footer {
     .contenu__bloc {
         @include contenu-bloc-size;
         h2 {
-            color: cornflowerblue;
-        }
-        h2 + p {
-            color: rgb(230, 233, 227);
-            font-size: 40px;
+            @include titre-menu;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: red;
+                }
+            }
         }
     }
+}
+
+.nom__menu {
+    font-size: 28px;
+    font-style: italic;
+    color: sandybrown;
 }
 
 .btn {
@@ -49,10 +58,6 @@ footer {
     .btn__style {
         @include btn-style;
     }
-}
-
-.contenu__bloc__btn {
-    text-decoration: none;
 }
 
 .soon {
