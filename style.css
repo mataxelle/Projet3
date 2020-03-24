@@ -37,21 +37,31 @@ footer {
   margin-top: 50px;
   margin-bottom: 0px; }
   .contenu .contenu__bloc {
-    width: 300px;
+    width: 400px;
     margin: 40px;
-    padding: 40px;
-    padding-top: 170px;
-    height: 400px;
+    height: 600px;
     border: 1px solid black; }
-    .contenu .contenu__bloc h2 {
-      color: #376807;
-      font-size: 40px;
-      text-align: center;
-      text-decoration: none; }
-      .contenu .contenu__bloc h2 a {
-        text-decoration: none; }
-        .contenu .contenu__bloc h2 a:hover {
-          color: red; }
+    .contenu .contenu__bloc .contenu__bloc__btn {
+      display: flex;
+      width: 400px;
+      height: 600px; }
+      .contenu .contenu__bloc .contenu__bloc__btn a {
+        text-decoration: none;
+        width: 100%;
+        padding-top: 170px;
+        transform: scale(1);
+        transition: transform 200ms; }
+        .contenu .contenu__bloc .contenu__bloc__btn a:hover {
+          transform: scale(1.2); }
+
+.contenu__bloc__btn--red {
+  background-color: #EE3E38; }
+.contenu__bloc__btn--peach {
+  background-color: #F86E51; }
+.contenu__bloc__btn--orange {
+  background-color: #FBA465; }
+.contenu__bloc__btn--beige {
+  background-color: #FFC7BA; }
 
 .nom__menu {
   font-size: 28px;

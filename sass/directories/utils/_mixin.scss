@@ -8,12 +8,16 @@
 }
 
 @mixin contenu-bloc-size {
-    width: 300px;
+    width: $cont-width;
     margin: 40px;
-    padding: 40px;
-    padding-top: 170px;
-    height: 400px;
+    height: $cont-height;
     border: 1px solid black;
+}
+
+@mixin contenu-bloc-btn-size {
+    display: flex;
+    width: $cont-width;
+    height: $cont-height;
 }
 
 @mixin btn-style {
@@ -26,7 +30,6 @@
     color: rgb(55, 104, 7);
     font-size: 40px;
     text-align: center;
-    text-decoration: none;
 }
 
 /*Partie contenu page menu*/

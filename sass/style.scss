@@ -34,15 +34,34 @@ footer {
     @include contenu-size;
     .contenu__bloc {
         @include contenu-bloc-size;
-        h2 {
-            @include titre-menu;
+        .contenu__bloc__btn {
+            @include contenu-bloc-btn-size;
             a {
                 text-decoration: none;
+                width: 100%;
+                padding-top: 170px;
+                transform: scale(1);
+                transition: transform 200ms;
                 &:hover {
-                    color: red;
+                    transform: scale(1.2);
                 }
             }
         }
+    }
+}
+
+.contenu__bloc__btn {
+    &--red {
+        background-color: $red;
+    }
+    &--peach {
+        background-color: $peach;
+    }
+    &--orange {
+        background-color: $orange;
+    }
+    &--beige {
+        background-color: $beige;
     }
 }
 
