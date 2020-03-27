@@ -3,7 +3,6 @@
 @import "directories/base/base";
 
 body {
-    background-color: $color-page;
     margin: 0px;
 }
 
@@ -36,10 +35,14 @@ footer {
         @include contenu-bloc-size;
         .contenu__bloc__btn {
             @include contenu-bloc-btn-size;
+            /*&:hover {
+                opacity: 0.5;
+            }*/
             a {
                 text-decoration: none;
                 width: 100%;
-                padding-top: 170px;
+                padding: 150px 20px;
+                text-align: center;
                 transform: scale(1);
                 transition: transform 200ms;
                 &:hover {
@@ -51,24 +54,53 @@ footer {
 }
 
 .contenu__bloc__btn {
-    &--red {
-        background-color: $red;
+    &--a {
+        background-color: $color-a;
     }
-    &--peach {
-        background-color: $peach;
+    &--b {
+        background-color: $color-b;
     }
-    &--orange {
-        background-color: $orange;
+    &--c {
+        background-color: $color-c;
     }
-    &--beige {
-        background-color: $beige;
+    &--d {
+        background-color: $color-d;
+    }
+}
+
+.nom__restaurant__ac {
+    &--a {
+        color: $menu-a;
+    }
+    &--b {
+        color: $menu-b;
+    }
+    &--c {
+        color: $menu-c;
+    }
+    &--d {
+        color: $menu-d;
     }
 }
 
 .nom__menu {
     font-size: 28px;
     font-style: italic;
-    color: sandybrown;
+    &--b {
+        background: linear-gradient(to right, #d49557 0%, #966ebb 50%, #3608a0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &--c {
+        background: linear-gradient(to right, $menu-c 0%, #4385f0 50%, #a7c4f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &--d {
+        background: linear-gradient(to right, $menu-d 0%, #7fd85f 50%, #bef0ac 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .btn {
@@ -127,8 +159,25 @@ footer {
 }
 
 /*Partie contenu page menu*/
+
+.nom__restaurant {
+    @include nom-restaurant;
+}
+
 .contenu__menu {
     @include contenu-page-menu-size;
+    &--a {
+        background-color: $color-a;
+    }
+    &--b {
+        background-color: $color-b;
+    }
+    &--c {
+        background-color: $color-c;
+    }
+    &--d {
+        background-color: $color-d;
+    }
 }
 
 h2 {
@@ -136,11 +185,20 @@ h2 {
     text-align: center;
 }
 
+.note {
+    font-size: 80px;
+    text-align: center;
+    font-size: 100px;
+    background: linear-gradient(to right, red 0%, orange 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h3 {
     font-size: 30px;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 h4 {
@@ -151,7 +209,40 @@ h4 {
 table, tr, td {
     @include tableau;
 }
+/*tr {
+    display: flex;
+    flex-direction: column;
+}*/
+td {
+    width: auto;
+}
 
 caption {
     font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+
+/*caption:before, caption:after { 
+    content:''; 
+    display:inline-block; 
+    vertical-align: middle; 
+    width: 8rem; 
+    height: 1px; 
+    background: #000 
+}
+caption:before { margin-right: .3rem }
+caption:after { margin-left: .3rem }*/
+
+/*couleur pour le menu 2*/
+.menu {
+    &__entre--b {
+        color: #d49557;
+    }
+    &__plat--b {
+        color: #966ebb;
+    }
+    &__dessert {
+        color: #3608a0;
+    }
 }

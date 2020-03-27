@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 150px;
     margin-top: 50px;
     margin-bottom: 0px;
 }
@@ -12,6 +11,7 @@
     margin: 40px;
     height: $cont-height;
     border: 1px solid black;
+    border-radius: 1%;
 }
 
 @mixin contenu-bloc-btn-size {
@@ -33,16 +33,23 @@
 }
 
 /*Partie contenu page menu*/
+
+@mixin nom-restaurant {
+    text-align: center;
+    margin-top: 50px;
+}
+
 @mixin contenu-page-menu-size {
     display: flex;
     flex-direction: column;
-    margin: 150px;
-    margin-top: 50px;
-    padding: 100px 40px;
+    margin: auto;
+    padding: 100px 100px;
     border: 1px solid black;
+    border-radius: 1%;
 }
 
 @mixin tableau {
     width: 100%;
     padding: 10px 0px;
+    margin-bottom: 40px;
 }
