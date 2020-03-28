@@ -35,18 +35,10 @@ footer {
         @include contenu-bloc-size;
         .contenu__bloc__btn {
             @include contenu-bloc-btn-size;
-            /*&:hover {
-                opacity: 0.5;
-            }*/
             a {
-                text-decoration: none;
-                width: 100%;
-                padding: 150px 20px;
-                text-align: center;
-                transform: scale(1);
-                transition: transform 200ms;
+                @include link;
                 &:hover {
-                    transform: scale(1.2);
+                    @include link-scale-progres;
                 }
             }
         }
@@ -56,15 +48,27 @@ footer {
 .contenu__bloc__btn {
     &--a {
         background-color: $color-a;
+        &:hover {
+            @include contenu-opacity;
+        }
     }
     &--b {
         background-color: $color-b;
+        &:hover {
+            @include contenu-opacity;
+        }
     }
     &--c {
         background-color: $color-c;
+        &:hover {
+            @include contenu-opacity;
+        }
     }
     &--d {
         background-color: $color-d;
+        &:hover {
+            @include contenu-opacity;
+        }
     }
 }
 
@@ -140,22 +144,16 @@ footer {
         font-size: 40px;
         border-radius: 20px;
         padding: 40px 60px;
-        &:hover {
-            &::after {
-            animation: soon steps(1, end) 2s infinite;
-            content: '';
+        span {
+            @include dot-soon;
+            &:nth-child(2) {
+                animation-delay: .2s;
             }
-        }
+            &:nth-child(3) {
+                animation-delay: .4s;
+            }
+        }    
     }
-}
-
-@keyframes soon {
-    0%   { content: '';}
-    20%  { content: '.'; opacity: 0.2; }
-    40%  { content: '..'; opacity: 0.5;}
-    60%  { content: '...'; opacity: 0.7;}
-    80%  { content: '....'; opacity: 1;}  
-    100% { content: '';}
 }
 
 /*Partie contenu page menu*/

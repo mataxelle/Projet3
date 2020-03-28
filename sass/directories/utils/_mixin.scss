@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0px 50px;
     margin-top: 50px;
     margin-bottom: 0px;
 }
@@ -10,8 +11,19 @@
     width: $cont-width;
     margin: 40px;
     height: $cont-height;
-    border: 1px solid black;
-    border-radius: 1%;
+    box-shadow: 1px 1px 10px rgb(192, 187, 187);
+}
+
+@mixin contenu-opacity { /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.6;
+        }
+    }
+    animation: fade 300ms 150ms forwards;
 }
 
 @mixin contenu-bloc-btn-size {
@@ -26,10 +38,38 @@
     background-color: $color-primary;
 }
 
-@mixin titre-menu {
-    color: rgb(55, 104, 7);
-    font-size: 40px;
+@mixin link {
+    text-decoration: none;
+    width: 100%;
+    padding: 150px 20px;
     text-align: center;
+}
+
+@mixin link-scale-progres { /*Dans cette mixin il y a le kframes du scale des nom des testaurants ainsi que son animation*/
+    @keyframes link-scale-progres {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    animation: link-scale-progres 300ms 150ms forwards;
+}
+
+@mixin dot-soon { /*Dans cette mixin il y a le kframes pour les points loarding du bouton 'prochainement/soon'*/
+    @keyframes dot {
+        0% {
+          opacity: .2;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          opacity: .2;
+        }
+    }
+    animation: dot 1.4s infinite both;
 }
 
 /*Partie contenu page menu*/
@@ -42,7 +82,7 @@
 @mixin contenu-page-menu-size {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0px 350px 150px 350px;
     padding: 100px 100px;
     border: 1px solid black;
     border-radius: 1%;

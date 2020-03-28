@@ -32,40 +32,71 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0px 50px;
   margin-top: 50px;
   margin-bottom: 0px; }
   .contenu .contenu__bloc {
     width: 400px;
     margin: 40px;
     height: 600px;
-    border: 1px solid black;
-    border-radius: 1%; }
+    box-shadow: 1px 1px 10px #c0bbbb; }
     .contenu .contenu__bloc .contenu__bloc__btn {
       display: flex;
       width: 400px;
-      height: 600px;
-      /*&:hover {
-          opacity: 0.5;
-      }*/ }
+      height: 600px; }
       .contenu .contenu__bloc .contenu__bloc__btn a {
         text-decoration: none;
         width: 100%;
         padding: 150px 20px;
-        text-align: center;
-        transform: scale(1);
-        transition: transform 200ms; }
+        text-align: center; }
         .contenu .contenu__bloc .contenu__bloc__btn a:hover {
-          transform: scale(1.2); }
-
+          /*Dans cette mixin il y a le kframes du scale des nom des testaurants ainsi que son animation*/
+          animation: link-scale-progres 300ms 150ms forwards; }
+@keyframes link-scale-progres {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.4); } }
 .contenu__bloc__btn--a {
   background-color: #fbdcdb; }
+  .contenu__bloc__btn--a:hover {
+    /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
+    animation: fade 300ms 150ms forwards; }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.6; } }
 .contenu__bloc__btn--b {
   background-color: #fbf3fb; }
+  .contenu__bloc__btn--b:hover {
+    /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
+    animation: fade 300ms 150ms forwards; }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.6; } }
 .contenu__bloc__btn--c {
   background-color: #f3f1f1; }
+  .contenu__bloc__btn--c:hover {
+    /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
+    animation: fade 300ms 150ms forwards; }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.6; } }
 .contenu__bloc__btn--d {
   background-color: #fbfbfb; }
-
+  .contenu__bloc__btn--d:hover {
+    /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
+    animation: fade 300ms 150ms forwards; }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.6; } }
 .nom__restaurant__ac--a {
   color: #58272e; }
 .nom__restaurant__ac--b {
@@ -134,27 +165,21 @@ footer {
     font-size: 40px;
     border-radius: 20px;
     padding: 40px 60px; }
-    .soon .btn__style--soon:hover::after {
-      animation: soon steps(1, end) 2s infinite;
-      content: ''; }
-
-@keyframes soon {
+    .soon .btn__style--soon span {
+      /*Dans cette mixin il y a le kframes pour les points loarding du bouton 'prochainement/soon'*/
+      animation: dot 1.4s infinite both; }
+@keyframes dot {
   0% {
-    content: ''; }
+    opacity: .2; }
   20% {
-    content: '.';
-    opacity: 0.2; }
-  40% {
-    content: '..';
-    opacity: 0.5; }
-  60% {
-    content: '...';
-    opacity: 0.7; }
-  80% {
-    content: '....';
     opacity: 1; }
   100% {
-    content: ''; } }
+    opacity: .2; } }
+      .soon .btn__style--soon span:nth-child(2) {
+        animation-delay: .2s; }
+      .soon .btn__style--soon span:nth-child(3) {
+        animation-delay: .4s; }
+
 /*Partie contenu page menu*/
 .nom__restaurant {
   text-align: center;
@@ -163,7 +188,7 @@ footer {
 .contenu__menu {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0px 350px 150px 350px;
   padding: 100px 100px;
   border: 1px solid black;
   border-radius: 1%; }
