@@ -234,7 +234,7 @@ h3 {
     margin-bottom: 50px;
 }
 
-h4 {
+h5 {
     font-size: 20px;
     text-align: center;
 }
@@ -242,30 +242,34 @@ h4 {
 table, tr, td {
     @include tableau;
 }
-/*tr {
-    display: flex;
-    flex-direction: column;
-}*/
+
 td {
     width: auto;
 }
 
-caption {
+.section {
+    display: flex;
+    justify-content: space-around;
+}
+
+h4 {
     font-size: 20px;
     font-weight: bolder;
     margin-bottom: 12px;
 }
 
-/*caption:before, caption:after { 
-    content:''; 
-    display:inline-block; 
-    vertical-align: middle; 
-    width: 8rem; 
-    height: 1px; 
-    background: #000 
+.underline {
+    position: relative;
 }
-caption:before { margin-right: .3rem }
-caption:after { margin-left: .3rem }*/
+
+.underline::after {
+    @include underline;
+}
+
+.underline:hover::after {
+    visibility: visible;
+    width: 100%;
+}
 
 /*couleur pour le menu 2*/
 .menu {

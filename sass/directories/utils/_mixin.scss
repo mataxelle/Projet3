@@ -146,3 +146,15 @@
     padding: 10px 0px;
     margin-bottom: 40px;
 }
+
+@mixin underline {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}

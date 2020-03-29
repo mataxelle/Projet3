@@ -300,7 +300,7 @@ h3 {
   margin-top: 10px;
   margin-bottom: 50px; }
 
-h4 {
+h5 {
   font-size: 20px;
   text-align: center; }
 
@@ -309,28 +309,36 @@ table, tr, td {
   padding: 10px 0px;
   margin-bottom: 40px; }
 
-/*tr {
-    display: flex;
-    flex-direction: column;
-}*/
 td {
   width: auto; }
 
-caption {
+.section {
+  display: flex;
+  justify-content: space-around; }
+
+h4 {
   font-size: 20px;
   font-weight: bolder;
   margin-bottom: 12px; }
 
-/*caption:before, caption:after { 
-    content:''; 
-    display:inline-block; 
-    vertical-align: middle; 
-    width: 8rem; 
-    height: 1px; 
-    background: #000 
-}
-caption:before { margin-right: .3rem }
-caption:after { margin-left: .3rem }*/
+.underline {
+  position: relative; }
+
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out; }
+
+.underline:hover::after {
+  visibility: visible;
+  width: 100%; }
+
 /*couleur pour le menu 2*/
 .menu__entre--b {
   color: #d49557; }
