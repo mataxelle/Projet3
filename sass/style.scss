@@ -105,6 +105,15 @@ footer {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    @include screen-size(tablet) {
+        font-size: 24px;
+    }
+    @include screen-size(tablet-s) {
+        font-size: 20px;
+    }
+    @include screen-size(mobile-l) {
+        font-size: 15px;
+    }
 }
 
 .btn {
@@ -140,10 +149,25 @@ footer {
     margin: 60px;
     margin-top: 0px;
     padding: 100px;
+    @include screen-size(tablet) {
+        margin-bottom: 30px;
+    }
+    @include screen-size(tablet-s) {
+        margin: 20px 0px;
+        padding-top: 50px;
+    }
     .btn__style--soon {
         font-size: 40px;
         border-radius: 20px;
         padding: 40px 60px;
+        @include screen-size(tablet) {
+            font-size: 30px;
+            padding: 25px 45px;
+        }
+        @include screen-size(tablet-s) {
+            font-size: 25px;
+            padding: 20px 20px;
+        }
         span {
             @include dot-soon;
             &:nth-child(2) {
@@ -181,15 +205,26 @@ footer {
 h2 {
     font-size: 40px;
     text-align: center;
+    @include screen-size(tablet-s) {
+        font-size: 30px;
+    }
+    @include screen-size(mobile-l) {
+        font-size: 20px;
+    }
 }
 
 .note {
-    font-size: 80px;
     text-align: center;
     font-size: 100px;
     background: linear-gradient(to right, red 0%, orange 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include screen-size(tablet) {
+        font-size: 50px;
+    }
+    @include screen-size(mobile-l) {
+        font-size: 40px;
+    }
 }
 
 h3 {

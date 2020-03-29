@@ -14,3 +14,13 @@ $menu-d: #5ba83f;
 
 $cont-height: 600px;
 $cont-width: 400px;
+
+
+/*Maps avec une liste pour les media queries*/
+$breakpoints: (
+    mobile: 479px,
+    mobile-l: 559px,
+    tablet-s: 699px,
+    tablet: 959px,
+    computer-s: 1169px
+);

@@ -1,3 +1,11 @@
+@mixin screen-size($breakpoint) {
+   @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+       @media (max-width: map-get($breakpoints, $breakpoint)){
+           @content;
+       }
+   }
+}
+
 @mixin contenu-size {
     display: flex;
     justify-content: center;
@@ -5,6 +13,13 @@
     margin: 0px 50px;
     margin-top: 50px;
     margin-bottom: 0px;
+    @include screen-size(computer-s) {
+        margin: 15px 0px;
+        margin-top: 50px;
+    }
+    @include screen-size(mobile-l) {
+        margin: auto;
+    }   
 }
 
 @mixin contenu-bloc-size {
@@ -12,6 +27,22 @@
     margin: 40px;
     height: $cont-height;
     box-shadow: 1px 1px 10px rgb(192, 187, 187);
+    @include screen-size(computer-s) {
+        margin: 20px;
+    }
+    @include screen-size(tablet) {
+        width: 300px;
+        height: 520px;
+    }
+    @include screen-size(tablet-s) {
+        margin: 15px;
+        width: 260px;
+        height: 450px
+    } 
+    @include screen-size(mobile-l) {
+        width: 200px;
+        height: 300px;
+    }   
 }
 
 @mixin contenu-opacity { /*Dans cette mixin il y a un kframes pour l'effet de fondu des menus/restaurants et l'animation du kframes*/
@@ -30,6 +61,18 @@
     display: flex;
     width: $cont-width;
     height: $cont-height;
+    @include screen-size(tablet) {
+        width: 300px;
+        height: 520px;
+    }
+    @include screen-size(tablet-s) {
+        width: 260px;
+        height: 450px;
+    }
+    @include screen-size(mobile-l) {
+        width: 200px;
+        height: 300px;
+    }
 }
 
 @mixin btn-style {
@@ -43,6 +86,12 @@
     width: 100%;
     padding: 150px 20px;
     text-align: center;
+    @include screen-size(tablet) {
+        padding: 120px 20px;
+    }
+    @include screen-size(mobile-l) {
+        padding: 70px 20px;
+    }
 }
 
 @mixin link-scale-progres { /*Dans cette mixin il y a le kframes du scale des nom des testaurants ainsi que son animation*/
@@ -86,6 +135,10 @@
     padding: 100px 100px;
     border: 1px solid black;
     border-radius: 1%;
+    @include screen-size(computer-s) {
+        margin: 0px 150px 150px 150px;
+        padding: 80px 60px;
+    }
 }
 
 @mixin tableau {

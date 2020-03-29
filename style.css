@@ -1,4 +1,5 @@
 /*Couleur du site*/
+/*Maps avec une liste pour les media queries*/
 /*Partie contenu page menu*/
 @font-face {
   font-family: 'cantarellregular';
@@ -35,20 +36,61 @@ footer {
   margin: 0px 50px;
   margin-top: 50px;
   margin-bottom: 0px; }
+  @media (max-width: 1169px) {
+    .contenu {
+      margin: 15px 0px;
+      margin-top: 50px; } }
+  @media (max-width: 559px) {
+    .contenu {
+      margin: auto; } }
   .contenu .contenu__bloc {
     width: 400px;
     margin: 40px;
     height: 600px;
     box-shadow: 1px 1px 10px #c0bbbb; }
+    @media (max-width: 1169px) {
+      .contenu .contenu__bloc {
+        margin: 20px; } }
+    @media (max-width: 959px) {
+      .contenu .contenu__bloc {
+        width: 300px;
+        height: 520px; } }
+    @media (max-width: 699px) {
+      .contenu .contenu__bloc {
+        margin: 15px;
+        width: 260px;
+        height: 450px; } }
+    @media (max-width: 559px) {
+      .contenu .contenu__bloc {
+        width: 200px;
+        height: 300px; } }
     .contenu .contenu__bloc .contenu__bloc__btn {
       display: flex;
       width: 400px;
       height: 600px; }
+      @media (max-width: 959px) {
+        .contenu .contenu__bloc .contenu__bloc__btn {
+          width: 300px;
+          height: 520px; } }
+      @media (max-width: 699px) {
+        .contenu .contenu__bloc .contenu__bloc__btn {
+          width: 260px;
+          height: 450px; } }
+      @media (max-width: 559px) {
+        .contenu .contenu__bloc .contenu__bloc__btn {
+          width: 200px;
+          height: 300px; } }
       .contenu .contenu__bloc .contenu__bloc__btn a {
         text-decoration: none;
         width: 100%;
         padding: 150px 20px;
         text-align: center; }
+        @media (max-width: 959px) {
+          .contenu .contenu__bloc .contenu__bloc__btn a {
+            padding: 120px 20px; } }
+        @media (max-width: 559px) {
+          .contenu .contenu__bloc .contenu__bloc__btn a {
+            padding: 70px 20px; } }
         .contenu .contenu__bloc .contenu__bloc__btn a:hover {
           /*Dans cette mixin il y a le kframes du scale des nom des testaurants ainsi que son animation*/
           animation: link-scale-progres 300ms 150ms forwards; }
@@ -121,6 +163,15 @@ footer {
     background: linear-gradient(to right, #5ba83f 0%, #7fd85f 50%, #bef0ac 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+  @media (max-width: 959px) {
+    .nom__menu {
+      font-size: 24px; } }
+  @media (max-width: 699px) {
+    .nom__menu {
+      font-size: 20px; } }
+  @media (max-width: 559px) {
+    .nom__menu {
+      font-size: 15px; } }
 
 .btn {
   margin: 0px 30px;
@@ -161,10 +212,25 @@ footer {
   margin: 60px;
   margin-top: 0px;
   padding: 100px; }
+  @media (max-width: 959px) {
+    .soon {
+      margin-bottom: 30px; } }
+  @media (max-width: 699px) {
+    .soon {
+      margin: 20px 0px;
+      padding-top: 50px; } }
   .soon .btn__style--soon {
     font-size: 40px;
     border-radius: 20px;
     padding: 40px 60px; }
+    @media (max-width: 959px) {
+      .soon .btn__style--soon {
+        font-size: 30px;
+        padding: 25px 45px; } }
+    @media (max-width: 699px) {
+      .soon .btn__style--soon {
+        font-size: 25px;
+        padding: 20px 20px; } }
     .soon .btn__style--soon span {
       /*Dans cette mixin il y a le kframes pour les points loarding du bouton 'prochainement/soon'*/
       animation: dot 1.4s infinite both; }
@@ -192,6 +258,10 @@ footer {
   padding: 100px 100px;
   border: 1px solid black;
   border-radius: 1%; }
+  @media (max-width: 1169px) {
+    .contenu__menu {
+      margin: 0px 150px 150px 150px;
+      padding: 80px 60px; } }
   .contenu__menu--a {
     background-color: #fbdcdb; }
   .contenu__menu--b {
@@ -204,14 +274,25 @@ footer {
 h2 {
   font-size: 40px;
   text-align: center; }
+  @media (max-width: 699px) {
+    h2 {
+      font-size: 30px; } }
+  @media (max-width: 559px) {
+    h2 {
+      font-size: 20px; } }
 
 .note {
-  font-size: 80px;
   text-align: center;
   font-size: 100px;
   background: linear-gradient(to right, red 0%, orange 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+  @media (max-width: 959px) {
+    .note {
+      font-size: 50px; } }
+  @media (max-width: 559px) {
+    .note {
+      font-size: 40px; } }
 
 h3 {
   font-size: 30px;
