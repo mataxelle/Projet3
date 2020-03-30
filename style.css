@@ -254,7 +254,7 @@ footer {
 .contenu__menu {
   display: flex;
   flex-direction: column;
-  margin: 0px 350px 150px 350px;
+  margin: 0px 250px 150px 250px;
   padding: 100px 100px;
   border: 1px solid black;
   border-radius: 1%; }
@@ -314,7 +314,8 @@ td {
 
 .section {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: baseline; }
 
 h4 {
   font-size: 20px;
@@ -346,5 +347,9 @@ h4 {
   color: #966ebb; }
 .menu__dessert {
   color: #3608a0; }
+
+img {
+  width: 30%;
+  height: 50%; }
 
 /*# sourceMappingURL=style.css.map */
