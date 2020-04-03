@@ -74,33 +74,41 @@ footer {
 
 .nom__restaurant__ac {
     &--a {
+        font-family: 'Itim', cursive;
         color: $menu-a;
     }
     &--b {
         color: $menu-b;
     }
     &--c {
+        font-family: 'Caveat', cursive;
         color: $menu-c;
     }
     &--d {
+        font-family: 'Caveat', cursive;
         color: $menu-d;
     }
 }
 
 .nom__menu {
-    font-size: 28px;
-    font-style: italic;
+    font-size: 35px;
+    &--a {
+        font-family: 'Devonshire', cursive;
+    }
     &--b {
+        font-family: 'Libre Caslon Display', serif;
         background: linear-gradient(to right, #d49557 0%, #966ebb 50%, #3608a0 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &--c {
+        font-family: 'Dancing Script', cursive;
         background: linear-gradient(to right, $menu-c 0%, #4385f0 50%, #a7c4f7 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &--d {
+        font-family: 'Kaushan Script', cursive;
         background: linear-gradient(to right, $menu-d 0%, #7fd85f 50%, #bef0ac 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -203,8 +211,7 @@ footer {
 }
 
 h2 {
-    font-size: 40px;
-    text-align: center;
+    font-size: 50px;
     @include screen-size(tablet-s) {
         font-size: 30px;
     }
@@ -228,48 +235,59 @@ h2 {
 }
 
 h3 {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-h5 {
-    font-size: 20px;
-    text-align: center;
+    @include titre-h-3;
 }
 
 table, tr, td {
     @include tableau;
 }
-
 td {
     width: auto;
 }
 
 .section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
 }
-
 h4 {
-    font-size: 20px;
+    font-size: 32px;
+    font-family: 'Caveat', cursive;
     font-weight: bolder;
     margin-bottom: 12px;
 }
-
 .underline {
     position: relative;
+    &_c--1 {
+        background-color: $menu-c;
+    }
 }
-
 .underline::after {
     @include underline;
 }
-
 .underline:hover::after {
     visibility: visible;
     width: 100%;
+}
+
+.price-size {
+    font-weight: 900;
+}
+
+/*Petite note de la page menu a*/
+.note-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .note-s-size {
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+h5 {
+    font-family: 'Devonshire', cursive;
+    font-size: 30px;
+    text-align: center;
 }
 
 /*couleur pour le menu 2*/
@@ -283,6 +301,14 @@ h4 {
     &__dessert {
         color: #3608a0;
     }
+}
+.font--b h4 {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 25px;
+}
+.font--b tr td {
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 22px;
 }
 
 img {

@@ -141,7 +141,16 @@
     }
 }
 
+@mixin titre-h-3 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
 @mixin tableau {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
     width: 100%;
     padding: 10px 0px;
     margin-bottom: 40px;

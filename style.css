@@ -140,26 +140,33 @@ footer {
   100% {
     opacity: 0.6; } }
 .nom__restaurant__ac--a {
+  font-family: 'Itim', cursive;
   color: #58272e; }
 .nom__restaurant__ac--b {
   color: #c87a21; }
 .nom__restaurant__ac--c {
+  font-family: 'Caveat', cursive;
   color: #0a63f3; }
 .nom__restaurant__ac--d {
+  font-family: 'Caveat', cursive;
   color: #5ba83f; }
 
 .nom__menu {
-  font-size: 28px;
-  font-style: italic; }
+  font-size: 35px; }
+  .nom__menu--a {
+    font-family: 'Devonshire', cursive; }
   .nom__menu--b {
+    font-family: 'Libre Caslon Display', serif;
     background: linear-gradient(to right, #d49557 0%, #966ebb 50%, #3608a0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .nom__menu--c {
+    font-family: 'Dancing Script', cursive;
     background: linear-gradient(to right, #0a63f3 0%, #4385f0 50%, #a7c4f7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .nom__menu--d {
+    font-family: 'Kaushan Script', cursive;
     background: linear-gradient(to right, #5ba83f 0%, #7fd85f 50%, #bef0ac 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
@@ -272,8 +279,7 @@ footer {
     background-color: #fbfbfb; }
 
 h2 {
-  font-size: 40px;
-  text-align: center; }
+  font-size: 50px; }
   @media (max-width: 699px) {
     h2 {
       font-size: 30px; } }
@@ -295,16 +301,14 @@ h2 {
       font-size: 40px; } }
 
 h3 {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 50px; }
 
-h5 {
-  font-size: 20px;
-  text-align: center; }
-
 table, tr, td {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
   width: 100%;
   padding: 10px 0px;
   margin-bottom: 40px; }
@@ -314,16 +318,19 @@ td {
 
 .section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline; }
 
 h4 {
-  font-size: 20px;
+  font-size: 32px;
+  font-family: 'Caveat', cursive;
   font-weight: bolder;
   margin-bottom: 12px; }
 
 .underline {
   position: relative; }
+  .underline_c--1 {
+    background-color: #0a63f3; }
 
 .underline::after {
   content: "";
@@ -340,6 +347,23 @@ h4 {
   visibility: visible;
   width: 100%; }
 
+.price-size {
+  font-weight: 900; }
+
+/*Petite note de la page menu a*/
+.note-small {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .note-small .note-s-size {
+    font-size: 20px;
+    margin: 10px; }
+
+h5 {
+  font-family: 'Devonshire', cursive;
+  font-size: 30px;
+  text-align: center; }
+
 /*couleur pour le menu 2*/
 .menu__entre--b {
   color: #d49557; }
@@ -347,6 +371,14 @@ h4 {
   color: #966ebb; }
 .menu__dessert {
   color: #3608a0; }
+
+.font--b h4 {
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 25px; }
+
+.font--b tr td {
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 22px; }
 
 img {
   width: 30%;
