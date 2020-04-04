@@ -329,23 +329,40 @@ h4 {
 
 .underline {
   position: relative; }
-  .underline_c--1 {
-    background-color: #0a63f3; }
 
 .underline::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 3px;
+  height: 4px;
   bottom: 0;
   left: 0;
-  background-color: blue;
   visibility: hidden;
   transition: all 0.3s ease-in-out; }
 
 .underline:hover::after {
   visibility: visible;
   width: 100%; }
+
+.section__a .underline::after {
+  background-color: #58272e; }
+
+.section__b:nth-child(1) .underline::after {
+  background-color: #d49557; }
+.section__b:nth-child(2) .underline::after {
+  background-color: #966ebb; }
+.section__b:nth-child(3) .underline::after {
+  background-color: #3608a0; }
+
+.section__c:nth-child(1) .underline::after {
+  background-color: #0a63f3; }
+.section__c:nth-child(2) .underline::after {
+  background-color: #6aa1f9; }
+.section__c:nth-child(3) .underline::after {
+  background-color: #fdfeff; }
+
+.section__d .underline::after {
+  background-color: #5ba83f; }
 
 .price-size {
   font-weight: 900; }

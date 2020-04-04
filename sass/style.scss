@@ -258,9 +258,6 @@ h4 {
 }
 .underline {
     position: relative;
-    &_c--1 {
-        background-color: $menu-c;
-    }
 }
 .underline::after {
     @include underline;
@@ -269,6 +266,54 @@ h4 {
     visibility: visible;
     width: 100%;
 }
+
+.section__a {
+    .underline::after {
+        background-color: $menu-a;
+    }
+}
+
+.section__b {
+    &:nth-child(1) {
+        .underline::after {
+            background-color: #d49557;
+        }
+    }
+    &:nth-child(2) {
+        .underline::after {
+            background-color: #966ebb;
+        }
+    }
+    &:nth-child(3) {
+        .underline::after {
+            background-color: #3608a0;
+        }
+    }
+}
+
+.section__c {
+    &:nth-child(1) {
+        .underline::after {
+            background-color: $menu-c;
+        }
+    }
+    &:nth-child(2) {
+        .underline::after {
+            background-color: lighten($color: $menu-c, $amount: 20);
+        }
+    }
+    &:nth-child(3) {
+        .underline::after {
+            background-color: lighten($color: $menu-c, $amount: 50);
+        }
+    }
+  }
+
+  .section__d {
+      .underline::after {
+          background-color: $menu-d;
+      }
+  }
 
 .price-size {
     font-weight: 900;
