@@ -4,6 +4,7 @@
 
 body {
     margin: 0px;
+    width: auto;
 }
 
 .page {
@@ -127,6 +128,10 @@ footer {
 .btn {
     margin: 0px 30px;
     font-size: 25px;
+    @include screen-size(mobile) {
+        margin: 0px 10px;
+        font-size: 15px;
+    }
     .btn__style {
         @include btn-style;
     }
@@ -140,16 +145,16 @@ footer {
 
 @keyframes shake {
     0% { transform: rotate(0deg); }
-    10% { transform: rotate(-1deg); }
-    20% { transform: rotate(1deg); }
+    10% { transform: rotate(-9deg); }
+    20% { transform: rotate(9deg); }
     30% { transform: rotate(0deg); }
-    40% { transform: rotate(1deg); }
-    50% { transform: rotate(-1deg); }
+    40% { transform: rotate(9deg); }
+    50% { transform: rotate(-9deg); }
     60% { transform: rotate(0deg); }
-    70% { transform: rotate(-1deg); }
-    80% { transform: rotate(1deg); }
+    70% { transform: rotate(-9deg); }
+    80% { transform: rotate(9deg); }
     90% { transform: rotate(0deg); }
-    100% { transform: rotate(-1deg); }
+    100% { transform: rotate(-9deg); }
   }
 
 .soon {
@@ -162,7 +167,10 @@ footer {
     }
     @include screen-size(tablet-s) {
         margin: 20px 0px;
-        padding-top: 50px;
+        padding: 50px 50px 70px 50px;
+    }
+    @include screen-size(mobile) {
+        padding: 30px 30px 50px 30px;
     }
     .btn__style--soon {
         font-size: 40px;
@@ -175,6 +183,9 @@ footer {
         @include screen-size(tablet-s) {
             font-size: 25px;
             padding: 20px 20px;
+        }
+        @include screen-size(mobile) {
+            font-size: 15px;
         }
         span {
             @include dot-soon;
@@ -249,12 +260,16 @@ td {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    text-align: center;
 }
 h4 {
     font-size: 32px;
     font-family: 'Caveat', cursive;
     font-weight: bolder;
     margin-bottom: 12px;
+    @include screen-size(tablet) {
+        font-size: 25px;
+    }
 }
 .underline {
     position: relative;
@@ -349,11 +364,9 @@ h5 {
 }
 .font--b h4 {
     font-family: 'Libre Caslon Display', serif;
-    font-size: 25px;
 }
 .font--b tr td {
     font-family: 'Libre Caslon Display', serif;
-    font-size: 22px;
 }
 
 img {

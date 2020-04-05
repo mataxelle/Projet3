@@ -8,7 +8,8 @@
   font-weight: normal;
   font-style: normal; }
 body {
-  margin: 0px; }
+  margin: 0px;
+  width: auto; }
 
 .page {
   display: flex;
@@ -40,9 +41,6 @@ footer {
     .contenu {
       margin: 15px 0px;
       margin-top: 50px; } }
-  @media (max-width: 559px) {
-    .contenu {
-      margin: auto; } }
   .contenu .contenu__bloc {
     width: 400px;
     margin: 40px;
@@ -57,7 +55,7 @@ footer {
         height: 520px; } }
     @media (max-width: 699px) {
       .contenu .contenu__bloc {
-        margin: 15px;
+        margin: 5px;
         width: 260px;
         height: 450px; } }
     @media (max-width: 559px) {
@@ -84,7 +82,8 @@ footer {
         text-decoration: none;
         width: 100%;
         padding: 150px 20px;
-        text-align: center; }
+        text-align: center;
+        transition: transform 1s; }
         @media (max-width: 959px) {
           .contenu .contenu__bloc .contenu__bloc__btn a {
             padding: 120px 20px; } }
@@ -92,13 +91,8 @@ footer {
           .contenu .contenu__bloc .contenu__bloc__btn a {
             padding: 70px 20px; } }
         .contenu .contenu__bloc .contenu__bloc__btn a:hover {
-          /*Dans cette mixin il y a le kframes du scale des nom des testaurants ainsi que son animation*/
-          animation: link-scale-progres 300ms 150ms forwards; }
-@keyframes link-scale-progres {
-  0% {
-    transform: scale(1); }
-  100% {
-    transform: scale(1.4); } }
+          transform: scale(1.3); }
+
 .contenu__bloc__btn--a {
   background-color: #fbdcdb; }
   .contenu__bloc__btn--a:hover {
@@ -183,6 +177,10 @@ footer {
 .btn {
   margin: 0px 30px;
   font-size: 25px; }
+  @media (max-width: 479px) {
+    .btn {
+      margin: 0px 10px;
+      font-size: 15px; } }
   .btn .btn__style {
     color: #d8bc2d;
     text-decoration: none;
@@ -195,25 +193,25 @@ footer {
   0% {
     transform: rotate(0deg); }
   10% {
-    transform: rotate(-1deg); }
+    transform: rotate(-9deg); }
   20% {
-    transform: rotate(1deg); }
+    transform: rotate(9deg); }
   30% {
     transform: rotate(0deg); }
   40% {
-    transform: rotate(1deg); }
+    transform: rotate(9deg); }
   50% {
-    transform: rotate(-1deg); }
+    transform: rotate(-9deg); }
   60% {
     transform: rotate(0deg); }
   70% {
-    transform: rotate(-1deg); }
+    transform: rotate(-9deg); }
   80% {
-    transform: rotate(1deg); }
+    transform: rotate(9deg); }
   90% {
     transform: rotate(0deg); }
   100% {
-    transform: rotate(-1deg); } }
+    transform: rotate(-9deg); } }
 .soon {
   text-align: center;
   margin: 60px;
@@ -225,7 +223,10 @@ footer {
   @media (max-width: 699px) {
     .soon {
       margin: 20px 0px;
-      padding-top: 50px; } }
+      padding: 50px 50px 70px 50px; } }
+  @media (max-width: 479px) {
+    .soon {
+      padding: 30px 30px 50px 30px; } }
   .soon .btn__style--soon {
     font-size: 40px;
     border-radius: 20px;
@@ -238,6 +239,9 @@ footer {
       .soon .btn__style--soon {
         font-size: 25px;
         padding: 20px 20px; } }
+    @media (max-width: 479px) {
+      .soon .btn__style--soon {
+        font-size: 15px; } }
     .soon .btn__style--soon span {
       /*Dans cette mixin il y a le kframes pour les points loarding du bouton 'prochainement/soon'*/
       animation: dot 1.4s infinite both; }
@@ -261,14 +265,21 @@ footer {
 .contenu__menu {
   display: flex;
   flex-direction: column;
-  margin: 0px 250px 150px 250px;
+  margin: 0px 100px 150px 100px;
   padding: 100px 100px;
   border: 1px solid black;
   border-radius: 1%; }
   @media (max-width: 1169px) {
     .contenu__menu {
-      margin: 0px 150px 150px 150px;
+      margin: 0px 40px 150px 40px;
       padding: 80px 60px; } }
+  @media (max-width: 959px) {
+    .contenu__menu {
+      margin: 0px 30px 150px 30px;
+      padding: 80px 20px; } }
+  @media (max-width: 559px) {
+    .contenu__menu {
+      margin: 0px 10px 150px 10px; } }
   .contenu__menu--a {
     background-color: #fbdcdb; }
   .contenu__menu--b {
@@ -308,10 +319,18 @@ h3 {
 
 table, tr, td {
   font-family: 'Caveat', cursive;
-  font-size: 30px;
+  font-size: 25px;
   width: 100%;
-  padding: 10px 0px;
-  margin-bottom: 40px; }
+  padding: 10px 0px; }
+  @media (max-width: 959px) {
+    table, tr, td {
+      font-size: 20px; } }
+  @media (max-width: 699px) {
+    table, tr, td {
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      margin-bottom: 0px; } }
 
 td {
   width: auto; }
@@ -319,13 +338,17 @@ td {
 .section {
   display: flex;
   justify-content: space-between;
-  align-items: baseline; }
+  align-items: baseline;
+  text-align: center; }
 
 h4 {
   font-size: 32px;
   font-family: 'Caveat', cursive;
   font-weight: bolder;
   margin-bottom: 12px; }
+  @media (max-width: 959px) {
+    h4 {
+      font-size: 25px; } }
 
 .underline {
   position: relative; }
@@ -390,15 +413,19 @@ h5 {
   color: #3608a0; }
 
 .font--b h4 {
-  font-family: 'Libre Caslon Display', serif;
-  font-size: 25px; }
+  font-family: 'Libre Caslon Display', serif; }
 
 .font--b tr td {
-  font-family: 'Libre Caslon Display', serif;
-  font-size: 22px; }
+  font-family: 'Libre Caslon Display', serif; }
 
 img {
   width: 30%;
   height: 50%; }
+  @media (max-width: 699px) {
+    img {
+      width: 20%; } }
+  @media (max-width: 479px) {
+    img {
+      width: 10%; } }
 
 /*# sourceMappingURL=style.css.map */
