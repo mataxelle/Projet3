@@ -282,49 +282,49 @@ h4 {
     width: 100%;
 }
 
-.section__a {
+.menu__trait--a {
     .underline::after {
         background-color: $menu-a;
     }
 }
 
-.section__b {
-    &:nth-child(1) {
+.menu__trait--b {
+    &:nth-of-type(1) {
         .underline::after {
             background-color: #d49557;
         }
     }
-    &:nth-child(2) {
+    &:nth-of-type(2) {
         .underline::after {
             background-color: #966ebb;
         }
     }
-    &:nth-child(3) {
+    &:nth-of-type(3) {
         .underline::after {
             background-color: #3608a0;
         }
     }
 }
 
-.section__c {
-    &:nth-child(1) {
+.menu__trait--c {
+    &:nth-of-type(1) {
         .underline::after {
             background-color: $menu-c;
         }
     }
-    &:nth-child(2) {
+    &:nth-of-type(2) {
+        .underline::after {
+            background-color: lighten($color: $menu-c, $amount: 10);
+        }
+    }
+    &:nth-of-type(3) {
         .underline::after {
             background-color: lighten($color: $menu-c, $amount: 20);
         }
     }
-    &:nth-child(3) {
-        .underline::after {
-            background-color: lighten($color: $menu-c, $amount: 50);
-        }
-    }
   }
 
-  .section__d {
+  .menu__trait--d {
       .underline::after {
           background-color: $menu-d;
       }
