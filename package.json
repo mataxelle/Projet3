@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://github.com/mataxelle/Projet3/issues"
   },
-  "homepage": "https://github.com/mataxelle/Projet3#readme"
+  "homepage": "https://github.com/mataxelle/Projet3#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.0"
+  }
 }
-
