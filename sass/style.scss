@@ -372,3 +372,13 @@ h5 {
 img {
     @include trait-section-menu;
 }
+
+/*Partie mentions*/
+.mention__titre {
+    text-align: center;
+    font-size: 40px;
+}
+
+.mention__legale {
+    @include mentions-l;
+}
