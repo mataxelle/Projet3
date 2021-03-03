@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/mataxelle/Projet3#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.6",
-    "postcss-cli": "^7.1.0"
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2"
   }
 }
